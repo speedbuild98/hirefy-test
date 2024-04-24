@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+.debug {
+  @apply border border-red-500;
+}
+
+::-webkit-scrollbar {
+  @apply bg-gray w-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue transition-all ease-in-out duration-300 cursor-pointer  rounded-xl;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-green;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
