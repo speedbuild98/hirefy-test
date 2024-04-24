@@ -11,7 +11,7 @@ const SearchBar = ({
   setSearch
 }: SearchBarProps) => {
   return (
-    <div className='flex flex-row items-center justify-start border-2 bg-gray border-gray2 rounded-[45px] mx-auto mb-10 px-[30px] py-3 w-[305px] md:w-[430px] xl:w-[576px]'>
+    <div className='flex flex-row items-center  z-10 justify-start border-2 bg-gray border-gray2 rounded-[45px] mx-auto mb-10 px-[30px] py-3 w-[305px] md:w-[430px] xl:w-[576px]'>
       <Image src="/assets/icons/search.svg" width={27} height={27} alt="Search" />
       <input
         autoFocus

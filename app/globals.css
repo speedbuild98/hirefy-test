@@ -20,6 +20,10 @@
   @apply bg-green;
 }
 
+.bg-mesh {
+  @apply bg-gradient-to-br from-black via-purple to-black via-blue;
+}
+
 .open-sans {
   font-family: "Open Sans", sans-serif;
 }

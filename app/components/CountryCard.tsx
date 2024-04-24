@@ -5,7 +5,7 @@ interface CountryCardProps {
 
 const CountryCard = ({ country }: CountryCardProps) => {
   return (
-    <div className='w-[305px] min-h-[268px] bg-gray border-2 border-[#505568] rounded-[20px] p-5 md:w-[430px] md:min-h-[256px] md:py-[30px] md:px-[31px]'>
+    <div className='w-[305px] min-h-[268px] bg-gray border-2 border-[#505568] rounded-[20px] p-5 z-10 md:w-[430px] md:min-h-[256px] md:py-[30px] md:px-[31px]'>
       <div className="flex flex-row items-center justify-start gap-[11px]">
         <span role="img" aria-label={country.name} className="rounded-full grid place-items-center bg-white w-[52px] h-[52px] min-w-[52px] min-h-[52px] object-contain">
           {country.emoji}

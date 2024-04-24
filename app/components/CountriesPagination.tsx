@@ -23,7 +23,7 @@ const CountriesPagination = ({ totalPages, currentPage, paginate }: CountriesPag
   const pages = Array.from({ length: Math.min(maxPagesToShow, totalPages) }, (_, index) => startPage + index);
 
   return (
-    <div className='flex flex-row items-center justify-center text-white font-bold mt-10 gap-2 text-sm'>
+    <div className='flex flex-row items-center justify-center text-white font-bold mt-10 gap-2 text-sm  z-10'>
       <button
         className="bg-gray rounded-lg border border-[#505568] min-w-8 min-h-8 flex justify-center items-center"
         onClick={() => handleClick(currentPage - 1)}

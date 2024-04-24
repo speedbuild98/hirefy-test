@@ -1,7 +1,7 @@
 'use client'
 import { gql } from "@apollo/client";
 import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
-import { CountriesContainer, CountriesPagination, CountryCard, SearchBar } from "./components";
+import { CountriesContainer, CountriesPagination, CountryCard, MeshEllipsisBg, SearchBar } from "./components";
 import { useState } from "react";
 
 const query = gql`
@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start bg-black py-[60px] px-[35px] xl:pl-[70px] xl:py-[100px] overflow-x-hidden">
+    <main className="flex min-h-screen flex-col items-center justify-start bg-black py-[60px] px-[35px] xl:pl-[70px] xl:py-[100px] overflow-hidden relative">
       <SearchBar search={search} setSearch={setSearch} />
       <CountriesContainer>
         {filteredData ? filteredData.length > 0 && currentCountries?.map((country: Country, index: number) => (
@@ -54,11 +54,12 @@ export default function Home() {
         )) :
           <p className="text-white text-[21px] font-bold">No countries found</p>
         }
-        {filteredData && filteredData.length === 0 && <p className="text-white text-[21px] font-bold">No countries found</p>}
-      </CountriesContainer>
+        {filteredData && filteredData.length === 0 && <p className="text-white text-[21px] font-bold text-center w-full">No countries found</p>}
+      </CountriesContainer >
       {filteredData && filteredData.length > 0 &&
         <CountriesPagination totalPages={totalPages} paginate={paginate} currentPage={currentPage} />
       }
-    </main>
+      <MeshEllipsisBg />
+    </main >
   );
 }
